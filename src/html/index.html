@@ -1,0 +1,86 @@
+@include('common/header.html',{
+"css":"/css/index.css",
+"title": "index title"
+})
+
+@include('../../dev/images/svg-symbols.svg')
+
+<h1>gulp html(pc) 实践</h1>
+
+<h2>(jpg,jpeg,png)sprite(gulp-css-spriter-dookay雪碧图)</h2>
+<ul class="sprite">
+  <li class="sina">新浪</li>
+  <li class="renren">人人</li>
+  <li class="qq">qq</li>
+  <li class="douban">豆瓣1</li>
+</ul>
+
+<h2>svg 图片引入</h2>
+<div>
+  <div>
+    <object type="image/svg+xml" data="/images/svg/home.svg" style="display:block;width:60px;height:60px">
+      <param name="src" value="/images/svg/home.svg">
+    </object>
+    <span> i am home (object)</span>
+  </div>
+  <div>
+    <embed src="/images/svg/web.svg" style="display:block;width:30px;height:30px" />
+    <span> i am web ( embed)</span>
+  </div>
+
+  <div>
+    <svg>
+      <use xlink:href="#web" /></svg>
+    <span>svg use (xlink:href ="web")</span>
+  </div>
+
+  <div>
+    <svg>
+      <use xlink:href="#home" /></svg>
+    <span>svg use (xlink:href ="home")</span>
+  </div>
+</div>
+
+<h2>svgSprite(基于gulp-svg-symbols) 图片引入</h2>
+<ul class="svgSprite">
+  <li class="home">
+    <svg>
+      <use xlink:href="#home" />
+    </svg>
+    <span>home</span>
+  </li>
+  <li class="web"><svg>
+      <use xlink:href="#web" />
+    </svg> web</li>
+</ul>
+</div>
+
+<h2>mock (基于fis-team的yog-devtools)</h2>
+<div class="mock-btn">
+  <button id="testBtn">test mock rewrite1</button>
+  <button id="testBtn1">test mock rewrite2</button>
+  <button id="testBtn2">test mock rewrite3</button>
+  <button id="testBtn3">test mock rewrite4</button>
+  <button id="testBtn4">test mock proxy</button>
+  <div class="tips" style="display:none;">数据加载中......</div>
+</div>
+<div class="ajax-box">
+  <div class="demo"></div>
+  <div class="math"></div>
+  <textarea name="" id="data-box" cols="30" rows="10"></textarea>
+</div>
+
+
+
+<div class="pay-wechat">
+  <img src="/images/me.jpg" width="200" height="200" alt="">
+</div>
+
+
+
+
+
+@include('common/footer.html',{
+"script":"js/page/index.js",
+"copyright": "index copyright"
+})

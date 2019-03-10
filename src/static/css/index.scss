@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: pink;
+}
+
+h1 {
+  text-align: center;
+  padding: 12px;
+  text-transform: capitalize;
+}
+
+h2,
+h3 {
+  padding: 12px;
+  text-align: center;
+}
+
+::placeholder {
+  color: gray;
+}
+
+#box {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  background-image: url(../images/sprite/test.png);
+}
+
+.svg-icon-lib {
+  display: none;
+}
+
+.mock-btn{
+  text-align: center;
+  button {
+    display: block;
+    height: 40px;
+    width: 200px;
+    border-radius: 8px;
+    margin: 10px auto;
+    text-align: center;
+    
+  }
+}
+
+
+.svgSprite {
+  list-style-type: none;
+  width: 200px;
+  margin-left: 100px;
+
+  li {
+    height: 54px;
+    line-height: 54px;
+    margin-bottom: 10px;
+    background: white;
+
+    svg {
+
+      fill: #1ba1e2;
+      stroke: red;
+      stroke-width: 10;
+      width: 40px;
+      height: 40px;
+      margin: 2px 0 0 4px;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+.sprite {
+  list-style-type: none;
+  width: 200px;
+  margin-left: 100px;
+
+  li {
+    height: 54px;
+    line-height: 54px;
+    padding-left: 60px;
+    margin-bottom: 10px;
+    background: white;
+    background-repeat: no-repeat;
+  }
+
+  .sina {
+    background-image: url(../images/sprite/icon_weibo.png);
+
+  }
+
+  .douban {
+    background-image: url(../images/sprite/icon_douban.png);
+
+  }
+
+  .qq {
+    background-image: url(../images/sprite/icon_qq.png);
+
+  }
+
+  .renren {
+    background-image: url(../images/sprite/icon_renren.png);
+
+  }
+}
+
+.ajax-box{
+  text-align: center;
+  #data-box{
+    padding: 20px;
+    width: 300px;
+  }
+}
+
+.pay-wechat{
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer{
+  text-align: center;
+}
