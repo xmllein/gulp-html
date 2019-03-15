@@ -17,7 +17,7 @@ function html() {
       basepath: '@file', //引用文件路径
       indent: true //保留文件的缩进
     }))
-    .pipe(changed('./dev'))
+    // .pipe(changed('./dev'))
     .pipe(gulp.dest('./dev'))
 }
 
@@ -41,13 +41,13 @@ gulp.task('html:dev', () => {
 gulp.task('html:dev2dist', () => {
   return gulp
     .src(['./dev/**/*.html','!./dev/common/**/*.html'])
+    .pipe(gulpRemoveHtml()) //打包删除多余的html代码
     .pipe(minifyHtml(config.tasks.html.htmlmin)) //html 压缩
     .pipe(cachebust({ //后缀添加当前时间戳
       images: true,
       showLog: true,
       type: 'timestamp'
     }))
-    .pipe(gulpRemoveHtml()) //打包删除多余的html代码
     .pipe(cdnify({ //添加cdn
       base: config.root.cdnUrl,
       html:{
